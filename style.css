@@ -1,0 +1,390 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+.show{
+	display: block;
+}
+:root{
+    --primary:#e50914;
+	--dark:#141414;
+}
+
+body {
+	font-family: 'Arial', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	background: #000;
+	color: #999;
+}
+ul {
+	list-style: none;
+}
+h1,h2,h3,h4 {
+	color: #fff;
+}
+
+a {
+	color: #fff;
+	text-decoration: none;
+}
+
+p {
+	margin: 0.5rem 0;
+}
+
+img {
+	width: 100%;
+}
+.showcase{
+	width: 100%;
+	height: 93vh;
+	position: relative;
+	background: url(images/bg3.png) no-repeat center center/cover;
+}
+.showcase-top{
+	height: 90px;
+	position: relative;
+	z-index: 2;
+}
+.showcase-top img{
+	width: 170px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+.showcase-top a{
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translate(-50%,-50%);
+}
+.showcase-content{
+	position: relative;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin-top: 9rem;
+	z-index: 2;
+}
+.showcase-content h1{
+	font-weight: 700;
+	font-size: 5.2rem;
+	line-height: 1.1;
+	margin: 0 0 2rem;
+	
+}
+.showcase-content p{
+	text-transform:uppercase;
+	color: #fff;
+	font-weight: 400;
+	font-size: 1.9rem;
+	line-height: 1.25;
+	margin: 0 0 2rem;
+	
+}
+.showcase::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.6);
+	z-index: 1;
+	box-shadow: inset 120px 100px 250px #000000 ,inset -120px -100px 250px #000000;
+}
+.btn{
+	color: #fff;
+	display: inline-block;
+	background: var(--primary);
+	padding: 0.4rem 1.3rem;
+	font-size: 1rem;
+	border: none;
+	cursor: pointer;
+	text-align: center;
+	outline: none;
+	border-radius: 2px;
+	box-shadow: 0 1px 0 rgba(0,0,0,0.45);
+	margin-right: 0.5rem;
+}
+.btn:hover{
+	opacity: 0.9;
+}
+.btn-rounded{
+	border-radius:5px;
+}
+.btn-xl{
+	font-size: 2rem;
+	text-transform: uppercase;
+	padding: 1.5rem 2.1rem;
+}
+.btn-lg{
+	font-size: 1rem;
+	text-transform: uppercase;
+	padding: 0.8rem 1.3rem;
+}
+.btn-special{
+	background: var(--primary);
+	color: white;
+	width: 60%;
+	padding: 0.7rem;
+}
+/* Tabs */
+.tabs{
+	background: var(--dark);
+	padding-top:1rem ;
+	border-bottom: 3px solid #3d3d3d;
+}
+.tabs .container{
+	display: grid;
+	grid-template-columns: repeat(3,1fr);
+	grid-gap: 1rem;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: gray;
+	
+}
+.tabs p{
+	font-size: 1.2rem;
+	padding-top: 0.5rem;
+}
+.container{
+	max-width: 70%;
+	margin: auto;
+	overflow: hidden;
+	padding: 0 2rem;
+}
+.tabs .container > div{
+	padding: 1.5rem 0;
+}
+.tabs .container > div:hover{
+	color: white;
+	cursor: pointer;
+}
+.tab-bordered{
+	border-bottom: 4px solid var(--primary);
+}
+#tab-1-content .tab1-content-inner{
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	overflow: hidden;
+}
+.tab-text{
+	text-align: left;
+	flex-basis: 50%;
+}
+.tab-text p{
+	font-size: 1.3rem;
+	padding: 0.5rem 0;
+	color: gray;
+}
+.tab-image{
+	flex-basis: 50%;
+}
+.tab-image img{
+	width: 100%;
+}
+#tab-1-content{
+	padding-top: 1rem;
+}
+/* hiding */
+#tab-1-content{
+	display: block;
+} 
+.tab-2-images{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	text-align: center;
+}
+#tab2-image-items{
+	flex-basis: 33%;
+}
+.tab-2-text{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 2.1rem 0;
+}
+.tab-2-text-p{
+	font-size: 1.7rem;
+	color: white;
+}
+#tab-2-text-item1{
+	flex-basis: 60%;
+}
+#tab-2-text-item2{
+	flex-basis: 40%;
+}
+.tab-2-text2 a{
+	display: block;
+	margin: auto;
+}
+#tab2-image-items .one{
+	font-size: 1.2rem;
+	color: white;
+}
+#tab2-image-items img{
+	padding: 1.2rem 0;
+}
+#tab2-image-items .two{
+	font-size: 1rem;
+	padding-top: 0.8rem;
+	line-height: 1.3rem;
+}
+/* hiding */
+#tab-2-content{
+	display: none;
+} 
+#tab-3-content{
+	display: none;
+}
+.tab-3-text{
+	text-align: center;
+	align-items: center;
+}
+.tab-3-text .tab-3-text1{
+	font-size: 1.8rem;
+	color: white;
+	padding-top: 2.4rem;
+	padding-bottom: 0.8rem;
+}
+.btn-spe{
+	padding-top: 0.8rem;
+	font-size: 1.3rem;
+	padding: 0.6rem;
+}
+.prices{
+	width: 93%;
+	padding-top: 1.7rem;
+	margin: auto;
+}
+#item{
+	align-items: center;
+	text-align: center;
+}
+.prices td{
+	padding:0.7rem;
+	font-size: 1rem;
+}
+.prices tr:nth-child(even){
+	background-color: rgb(29, 29, 29);
+}
+.prices tr th{
+	color: white;
+	padding-bottom: 1rem;
+}
+.footer-text{
+	padding-top: 2.5rem;
+}
+.lists-footer{
+	padding: 1.4rem 0;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.lists-footer li{
+	list-style-type: none;
+	padding: 0.3rem;
+}
+.lists-footer li a{
+	text-decoration: none;
+	color: gray;
+	cursor: pointer;
+}
+
+/* media query */
+@media only screen and (max-width:500px)
+{
+	.container{
+		width: 95%;
+		margin: auto;
+	}
+	.showcase-top img{
+		width: 130px;
+		position: absolute;
+		top: 50%;
+		left: 20%;
+		transform: translate(-50%,-50%);
+	}
+	.showcase-top a{
+		width: 100px;
+		position: absolute;
+		top: 50%;
+		right: 0;
+		transform: translate(-20%,-50%);
+	}
+	.showcase-content h1{
+		font-size: 2.9rem;
+	}
+	.showcase-content p{
+		font-size: 1.7rem;
+	}
+	.btn-xl{
+		font-size: 1.2rem;
+		padding: 1.1rem;
+		margin-top: 1.1rem;
+	}
+	
+	.tabs i{
+		padding: 1.1rem 1.4rem;
+	}
+	.tabs p{
+		font-size: 1.2rem;
+	}
+	#tab-1-content .tab1-content-inner{
+		flex-flow: column;
+		text-align: center;
+	}
+	#tab-1-content .tab1-content-inner .tab-text{
+		text-align: left;
+		font-size: 1.6rem;
+		line-height: 1.6rem;
+	}
+	.btn-lg{
+		width: 90%;
+		display: block;
+		margin: 1.1rem auto;
+		padding: 0.5rem;
+		font-size: 0.9rem;
+	}
+	.tab-2-text{
+		flex-flow: column;
+	}
+	.tab-2-text1 p{
+		font-size: 1.3rem;
+		width: 100%;
+		padding-bottom: 1.1rem;
+	}
+	.btn-special{
+		width: 100%;
+		margin: auto;
+		padding: 0.6rem;
+		font-size:0.9rem ;
+		
+	}
+	.tab-2-images{
+		flex-flow: column;
+	}
+	.prices{
+		width: 100%;
+	}
+	.prices td{
+		padding:0.4rem;
+		font-size: 0.8rem;
+	}
+	.prices th{
+		font-size: 0.6rem;
+	}
+	.lists-footer li{
+		list-style-type: none;
+		padding: 0.3rem;
+	}
+}
